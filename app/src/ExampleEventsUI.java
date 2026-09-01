@@ -22,6 +22,12 @@ public class ExampleEventsUI extends JFrame  {
         setSize(400, 400);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
+        checkBox1.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                System.out.println(e.getStateChange());
+            }
+        });
     }
 
     public void initComponents() {
